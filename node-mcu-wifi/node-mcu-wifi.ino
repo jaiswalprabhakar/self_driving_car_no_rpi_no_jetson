@@ -13,8 +13,10 @@ String command;             //String to store app command state.
 int speedCar = 800;         // 400 - 1023.
 int speed_Coeff=1;
 
+ESP8266WebServer server(80);      // Create a webserver object that listens for HTTP request on port 80
+
 const char* ssid = "PJ";
-const char *password = "123456789#";
+const char *password = "1234567890";
 
 WiFiClient client;
 
@@ -43,6 +45,7 @@ if (WiFi.status() == WL_CONNECTED) {
 }
 
 void setup() {
+ Serial.begin(115200);
  connectToWiFi();
  pinMode(ENA, OUTPUT);
  pinMode(ENB, OUTPUT); 
@@ -52,7 +55,7 @@ void setup() {
  pinMode(INB1, OUTPUT);
  pinMode(INB2, OUTPUT); 
  
-//  Serial.begin(115200);
+ 
   
 // Connecting WiFi
    

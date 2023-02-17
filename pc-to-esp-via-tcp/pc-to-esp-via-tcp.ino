@@ -94,7 +94,7 @@ String getPath(){
 
 void setup(){
   Serial.begin(9600);
-  start("PJ","123456789#"); // Wifi details connec to
+  start("PJ","123456789!"); // Wifi details connec to
 
   pinMode(LED,OUTPUT);
 }
